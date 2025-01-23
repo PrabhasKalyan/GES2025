@@ -27,6 +27,8 @@
     </script>
     <link href="https://www.ecell-iitkgp.org/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
     <link href="https://www.ecell-iitkgp.org/images/favicon.png" rel="apple-touch-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
 </head>
 
 <body>
@@ -136,8 +138,13 @@
     </div>
     </div>
     </div>
-    <section class="hero-section section-padding homeapage-01">
-        <div class="w-layout-blockcontainer container w-container">
+    <section style="padding-bottom: 350px;"  class="hero-section homeapage-01">
+        <div id="globe">
+        </div>
+        <div id="globe_mobile">
+
+        </div>
+        <div style="transform: translateY(200px);" class="w-layout-blockcontainer container w-container">
             <div data-w-id="6b8a59f9-3bc1-e630-49d1-d51db59a4443" class="content-left-wrapper hero">
                 <div style="display: flex;justify-content: space-between;">
                     <div>
@@ -154,13 +161,10 @@
                             </a>
                         </div>
                     </div>
-                    <!-- <div style="display: flex; justify-content: center; align-items: center; height: 200%; width: 150%;transform: translateY(-20%); " class="globe-wrapper">
-                        <canvas id="globe-3d"></canvas>
-                        <canvas id="globe-2d-overlay"></canvas>
-                        <div id="globe-popup-overlay">
-                            <div class="globe-popup"></div>
-                        </div>
-                    </div> -->
+                    <div style="display: flex; justify-content: center; align-items: center; height: 200%; width: 150%;transform: translateY(-20%); " class="globe-wrapper">
+                        <!-- <div id="globe">
+                        </div> -->
+                    </div>
                     
                 </div>
             </div>
@@ -184,7 +188,7 @@
             if (dot < 0.5) discard;
             gl_FragColor = vec4(color, dot * vOpacity);
         }
-    </script>
+    </scrip>
 
     <!-- Vertex Shader -->
     <script type="x-shader/x-vertex" id="vertex-shader-map">
@@ -325,7 +329,7 @@
                     <div class="content-right-wrapper features">
                         <div class="title-wrapper">
                             <!-- <p class="feature-label body-text-16 text-theme-color-1">Smart Contract Development</p> -->
-                            <div style="display: flex; color: #6e62c3; font-weight: bold;" class="box-icon-wrapper"><p class="feature-label body-text-16">FuelingIdeas</p></div>
+                            <div style="display: flex; color: #6e62c3; font-weight: bold;" class="box-icon-wrapper"><p class="feature-label body-text-16">Fueling&nbsp;Ideas</p></div>
                             <h2 class="heading-2 text-neutral-01">About GES?</h2>
                         </div>
                         <p class="body-text-16 text-neutral-02">The Global Entrepreneurship Summit (GES) is IIT Kharagpur's annual international corporate summit, organized by the Entrepreneurship Cell. Since its inception in 2007, GES has become India's largest student-run entrepreneurial summit, attracting visionaries from across industries.</p>
@@ -338,7 +342,7 @@
                         <!-- <p class="feature-label body-text-16 text-theme-color-1">Smart Contract Development</p> -->
                         <div style="display: flex;" class="box-icon-wrapper">
                             <!-- <img loading="lazy" src="https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/66c99835e9bf38bf9e2aec6f_003-bar%20chart.svg" alt="scalable-icon" class="icon" /> -->
-                            <p style="color: #6e62c3; font-weight: bold;" class="feature-label body-text-16">ConnectingLeaders</p></div>
+                            <p style="color: #6e62c3; font-weight: bold;" class="feature-label body-text-16">Connecting&nbsp;Leaders</p></div>
                         <h2 class="heading-2 text-neutral-01">A Hub for Visionaries</h2>
                     </div>
                     <p class="body-text-16 text-neutral-02">GES brings together academicians, innovative entrepreneurs, industry leaders, venture capitalists, and ambitious students. It’s a space for sharing ideas, showcasing entrepreneurial journeys, and building connections that inspire growth.</p>
@@ -351,7 +355,7 @@
                         <!-- <p class="feature-label body-text-16 text-theme-color-1">Smart Contract Development</p> -->
                         <div style="display: flex;" class="box-icon-wrapper">
                             <!-- <img loading="lazy" src="https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/66c99835e9bf38bf9e2aec6f_003-bar%20chart.svg" alt="scalable-icon" class="icon" /> -->
-                            <p style="color: #6e62c3; font-weight: bold;" class="feature-label body-text-16"> ShapingTomorrow</p></div>
+                            <p style="color: #6e62c3; font-weight: bold;" class="feature-label body-text-16"> Shaping&nbsp;Tomorrow</p></div>
                         <h2 class="heading-2 text-neutral-01">Empowering the Future</h2>
                     </div>
                     <p class="body-text-16 text-neutral-02">With a commitment to driving innovation and fostering entrepreneurial excellence, GES empowers individuals to dream big, collaborate, and shape the future of global business and innovation.</p>
@@ -555,18 +559,19 @@
             </div>
         </div>
     </section>
-    <br><br>
+    <br><br><br>
     <section class="blog-section">
         <div class="w-layout-blockcontainer container w-container">
-            <div data-w-id="dd96bec5-e68b-f371-65bc-ec0e395d0f04" style="opacity:0" class="inner-container blog">
+            <div style="margin-bottom: 0px !important ; padding-bottom: 0px !important ;" data-w-id="dd96bec5-e68b-f371-65bc-ec0e395d0f04" style="opacity:0" class="inner-container blog">
                 <div class="content-left-wrapper blog">
-                    <div style="margin: 0px !important;" class="title-wrapper">
-                        <h1 class="heading-2 text-neutral-01">Events &nbsp;&emsp;&emsp; &nbsp;&emsp;&emsp; &nbsp;&emsp;&emsp;</h1>
+                    <div style=" margin-bottom: 0px; padding-bottom: 0px !important ;" class="title-wrapper">
+                        <h1 class="heading-3 text-neutral-01">Events</h1>
+                        <h1 class="heading-3 text-neutral-01"> in GES 2025</h1>
                     </div>
                 </div>
                 <div class="blogs">
                     <div data-delay="4000" data-animation="slide" class="blog-slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-                        <div class="blog-mask style-01 w-slider-mask">
+                        <div  class="blog-mask style-01 w-slider-mask">
                             <div class="single-blog-slider w-slide">
                                 <div class="service-list-wrapper w-dyn-list">
                                     <div role="list" class="blog-list-slider w-dyn-items">
@@ -730,7 +735,6 @@
                 margin: 0 auto;
                 height: 100%;
                 max-height: 800px;
-                
                 }
             .cs-image-wrapper{
                 width: 80%;
@@ -754,6 +758,7 @@
                                 <div
                                     class="cs-content-wrapper">
                                     <div class="title-wrapper cs"><a href="https://unstop.com/o/hFRuQGj?lb=96FeDezA&utm_medium=Share&utm_source=shortUrl" class="cs-title">R&D Symposium</a>
+                                        <h5>Incentives - 5L+</h5>
                                         <p class="cs-excerpt">The RnD Symposium bridges entrepreneurship with research, empowering scholars to transform their work into real-life applications while advancing their research.</p>
                                     </div>
                                     <div class="button-wrapper">
@@ -775,10 +780,11 @@
                             <div
                                 class="cs-content-wrapper">
                                 <div class="title-wrapper cs"><a href="https://unstop.com/o/1MafmuA?lb=96FeDezA&utm_medium=Share&utm_source=shortUrl" class="cs-title">Invest-O-Spective</a>
+                                    <h5>Prize Money - 1L+</h5>
                                     <p class="cs-excerpt">A unique competition to explore startup analysis for informed investment decisions while showcasing your analytical, communication, and presentation skills.</p>
                                 </div>
                                 <div class="button-wrapper">
-                                    <a data-w-id="f922bc05-356c-bfb4-6c29-5c127824a023" href="/case-studies/unveiling-real-world-blockchain-success" class="button-style-02 w-inline-block">
+                                    <a data-w-id="f922bc05-356c-bfb4-6c29-5c127824a023" href="https://unstop.com/o/1MafmuA?lb=96FeDezA&utm_medium=Share&utm_source=shortUrl" class="button-style-02 w-inline-block">
                                         <div class="button-content-wrapper">
                                             <div class="button-text-wrapper">
                                                 <p class="button-text">Register</p>
@@ -796,9 +802,12 @@
                         <div
                             class="cs-content-wrapper">
                             <div class="title-wrapper cs"><a href="https://unstop.com/o/hFRuQGj?lb=96FeDezA&utm_medium=Share&utm_source=shortUrl" class="cs-title">Business Game</a>
+                                <h5>Prize Money - 2L+</h5>
                                 <p class="cs-excerpt">
                                     A unique competition to explore startup analysis and make informed investment decisions. Showcase your analytical, communication, and presentation skills.</p>
+                                    
                             </div>
+                            
                             <div class="button-wrapper">
                                 <a data-w-id="f922bc05-356c-bfb4-6c29-5c127824a023" href="https://unstop.com/o/hFRuQGj?lb=96FeDezA&utm_medium=Share&utm_source=shortUrl" class="button-style-02 w-inline-block">
                                     <div class="button-content-wrapper">
@@ -818,6 +827,7 @@
                     <div
                         class="cs-content-wrapper">
                         <div class="title-wrapper cs"><a href="/case-studies/inspiring-blockchain-case-studies" class="cs-title">Empressario</a>
+                            <h5>Prize Money - 1Cr+</h5>
                             <p class="cs-excerpt">Empresario, IIT Kharagpur's annual business model competition, offers mentorship and a platform to pitch ideas to Venture Capitalists, Angel Investors, and Industry Leaders</p>
                         </div>
                         <div class="button-wrapper">
@@ -917,19 +927,9 @@ transform: translateY(-20px);
     align-items: center;
     padding: 12px;
     margin-top: 12px;
+    background-color: black;
 }
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-/* Ensure proper spacing between testimonials */
-.single-slider-wrapper {
-    padding: 16px;
-}
-        </style>
+</style>
     <div class="testimonial-section">
         <div class="testimonial-wrapper">
             <div class="slider-left">
@@ -1235,7 +1235,7 @@ transform: translateY(-20px);
         <!-- </div><img sizes="100vw" srcset="https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/66fe451168dd6c65261ddab9_footer-img-p-500.png 500w, https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/66fe451168dd6c65261ddab9_footer-img-p-800.png 800w, https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/66fe451168dd6c65261ddab9_footer-img-p-1080.png 1080w, https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/66fe451168dd6c65261ddab9_footer-img-p-1600.png 1600w, https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/66fe451168dd6c65261ddab9_footer-img-p-2000.png 2000w, https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/66fe451168dd6c65261ddab9_footer-img.png 2880w"
             alt="cta-image" src="https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/66fe451168dd6c65261ddab9_footer-img.png" loading="lazy" class="cta-image" /> -->
     </section>
-            <section class="footer-section section-padding">
+            <section class="footer-section">
                 <footer>
                     <div>
                         <div class="meteor meteor-1"></div>
@@ -1322,6 +1322,7 @@ transform: translateY(-20px);
                                     href="https://www.instagram.com/iitkgp_ecell/?hl=en" class="single-social-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/66c9913f9ec3635f82e29092_Instagram.svg" alt="social-icon" class="single-icon" /></a><a href="https://www.linkedin.com/company/ecellkgp/" class="single-social-link w-inline-block"><img loading="lazy" src="https://ges-25.vercel.app/assets/images/image.png" alt="social-icon" class="single-icon"/></a></div>
                         </div>
                     </div>
+                    <br><br>
                 </div>
                 </footer>
                 <style>
@@ -1333,6 +1334,42 @@ transform: translateY(-20px);
     </div>
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66c990ac06b0d169d195aeb9" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.prod.website-files.com/66c990ac06b0d169d195aeb9/js/webflow.7e0664a9f.js" type="text/javascript"></script>
+    <script>
+        VANTA.GLOBE({
+        el: "#globe",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 850.00,
+        minWidth: 750.00,
+        scale: 1.00,
+        scaleMobile: 1.00
+        })
+    </script>
+    <script>
+        VANTA.GLOBE({
+        el: "#globe_mobile",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 600.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00
+        })
+    </script>
+    <style>
+         @media (max-width: 767px) {
+            #globe {
+                display: none;
+            }
+         }
+         @media (min-width: 767px) {
+            #globe_mobile {
+                display: none;
+            }
+         }
+    </style>
 </body>
 
 </html>
