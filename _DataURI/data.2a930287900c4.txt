@@ -1,0 +1,1 @@
+chrome-extension://alhgpfoeiimagjlnfekdhkjlkiomcapa/js/css/a_chrome-extension_inject_gmail_components_compose-window_EmailerSnippetsButton_tsx.css

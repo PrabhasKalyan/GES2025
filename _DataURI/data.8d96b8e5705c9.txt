@@ -1,0 +1,1 @@
+chrome-extension://alhgpfoeiimagjlnfekdhkjlkiomcapa/js/vendors-node_modules_highcharts-custom-events_js_customEvents_js-node_modules_highcharts-reac-9136f8.chunk.js
